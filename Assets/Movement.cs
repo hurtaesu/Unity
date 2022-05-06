@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     private float jumpforce = 8.0f;
     public float jumpcount = 2;
     private Rigidbody2D rigid;
+    private SpriteRenderer sprite;
 
     [SerializeField]
     private LayerMask groundlayer;
@@ -21,6 +22,7 @@ public class Movement : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        sprite = GetComponent<SpriteRenderer>(); 
     }
 
     private void FixedUpdate()
@@ -46,6 +48,19 @@ public class Movement : MonoBehaviour
     public void Move(float x)
     {
         rigid.velocity = new Vector2(x * movespeed, rigid.velocity.y);
+
+        if (x == 1)
+        {
+            sprite.flipX = false;
+        }
+        else if (x == -1)
+        {
+            sprite.flipX= true;
+        }
+
+              
+
+        
     }
 
     private void OnDrawGizmos()
