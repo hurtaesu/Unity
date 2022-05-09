@@ -5,12 +5,14 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     private Movement movement;
+    private Status status;
     [SerializeField]
     private GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
         movement = GetComponent<Movement>();
+        status = GetComponent<Status>();
 
     }
 

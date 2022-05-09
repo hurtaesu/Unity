@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField]
-    private float movespeed = 5.0f;
+    public float movespeed = 5.0f;
+    private float defaultspeed;
     [SerializeField]
     private float jumpforce = 8.0f;
+    public float dashforce = 10.0f;
     public float jumpcount = 2;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
+    private Status status;
+    public bool isdash;
+    [SerializeField]
+    private float startdashtime;
+    private float dashtime;
 
     [SerializeField]
     private LayerMask groundlayer;
@@ -23,9 +29,11 @@ public class Movement : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>(); 
+        status = GetComponent<Status>();
+        defaultspeed = movespeed;
     }
 
-    private void FixedUpdate()
+    void Update()
     {
         Bounds bounds = boxCollider.bounds;
         footposition = new Vector2(bounds.center.x, bounds.min.y);
@@ -36,6 +44,26 @@ public class Movement : MonoBehaviour
         {
             jumpcount = 2;
         }
+
+        if(Input.GetKeyDown(KeyCode.LeftShift) && status.stamina > 0)
+        {
+            isdash = true;
+            status.stamina--;
+        }
+        if(dashtime <= 0)
+        {
+            defaultspeed = movespeed;
+            if(isdash)
+            {
+                dashtime = startdashtime;
+            }
+        }
+        else
+        {
+            dashtime -= Time.deltaTime;
+            defaultspeed = dashforce;
+        }
+        isdash = false;
     }
 
     public void jump()
@@ -47,7 +75,7 @@ public class Movement : MonoBehaviour
 
     public void Move(float x)
     {
-        rigid.velocity = new Vector2(x * movespeed, rigid.velocity.y);
+        rigid.velocity = new Vector2(x * defaultspeed, rigid.velocity.y);
 
         if (x == 1 || x == 0)
         {
@@ -56,13 +84,8 @@ public class Movement : MonoBehaviour
         else if (x == -1)
         {
             sprite.flipX= true;
-        }
-
-              
-
-        
+        }     
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
