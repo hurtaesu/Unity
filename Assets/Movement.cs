@@ -14,20 +14,20 @@ public class Movement : MonoBehaviour
 
     [SerializeField]
     private LayerMask groundlayer;
-    private CapsuleCollider2D capsuleCollider;
+    private BoxCollider2D boxCollider;
     private bool isground;
     private Vector3 footposition;
 
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>(); 
     }
 
     private void FixedUpdate()
     {
-        Bounds bounds = capsuleCollider.bounds;
+        Bounds bounds = boxCollider.bounds;
         footposition = new Vector2(bounds.center.x, bounds.min.y);
         isground = Physics2D.OverlapCircle(footposition, 0.1f, groundlayer);
 
@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
     {
         rigid.velocity = new Vector2(x * movespeed, rigid.velocity.y);
 
-        if (x == 1)
+        if (x == 1 || x == 0)
         {
             sprite.flipX = false;
         }
