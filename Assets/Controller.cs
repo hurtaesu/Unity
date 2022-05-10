@@ -8,11 +8,13 @@ public class Controller : MonoBehaviour
     private Status status;
     [SerializeField]
     private GameObject bullet;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         movement = GetComponent<Movement>();
         status = GetComponent<Status>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -23,6 +25,7 @@ public class Controller : MonoBehaviour
         {
             movement.jump();
         }
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical"); 
         movement.Move(x);

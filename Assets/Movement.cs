@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float startdashtime;
     private float dashtime;
+    private Animator animator;
 
     [SerializeField]
     private LayerMask groundlayer;
@@ -30,6 +31,7 @@ public class Movement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>(); 
         status = GetComponent<Status>();
+        animator = GetComponent<Animator>();
         defaultspeed = movespeed;
     }
 
@@ -53,6 +55,7 @@ public class Movement : MonoBehaviour
         if(dashtime <= 0)
         {
             defaultspeed = movespeed;
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
             if(isdash)
             {
                 dashtime = startdashtime;
@@ -62,6 +65,7 @@ public class Movement : MonoBehaviour
         {
             dashtime -= Time.deltaTime;
             defaultspeed = dashforce;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         isdash = false;
     }
@@ -71,6 +75,7 @@ public class Movement : MonoBehaviour
         if (jumpcount > 0)
         rigid.velocity = Vector2.up * jumpforce;
         jumpcount--;
+        animator.SetBool("jump", true);
     }
 
     public void Move(float x)
@@ -84,7 +89,15 @@ public class Movement : MonoBehaviour
         else if (x == -1)
         {
             sprite.flipX= true;
-        }     
+        }   
+        if(x == 1 || x == -1)
+        {
+            animator.SetBool("move",true);
+        }
+        else if(x == 0)
+        {
+            animator.SetBool("move",false);
+        }
     }
     private void OnDrawGizmos()
     {
