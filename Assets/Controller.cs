@@ -36,4 +36,21 @@ public class Controller : MonoBehaviour
             clone.GetComponent<bulletMovement>().Setup(new Vector3(x, 0, 0));
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Item"))
+        {
+            Scriptable hitObject = collision.gameObject.GetComponent<Item>().sword; 
+
+            if(hitObject != null)
+            {
+                if(hitObject.itemType == Scriptable.ItemType.WEAPON)
+                {
+                    Debug.Log("¹«±â È¹µæ");
+                }
+            }
+            collision.gameObject.SetActive(false);
+        }
+    }
 }
