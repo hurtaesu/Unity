@@ -10,7 +10,8 @@ public class Status : MonoBehaviour
     private float currenttime = 5;
     [SerializeField]
     private float stamina_timer;
-    public Image image;
+    [SerializeField]
+    private Image image;
     void Start()
     {
         image = GetComponent<Image>();
