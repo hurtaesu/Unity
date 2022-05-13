@@ -11,10 +11,10 @@ public class Status : MonoBehaviour
     [SerializeField]
     private float stamina_timer;
     [SerializeField]
-    private Image image;
+    private Image staminaimage;
     void Start()
     {
-        image = GetComponent<Image>();
+        staminaimage = GetComponent<Image>();
     }
 
 
@@ -30,13 +30,13 @@ public class Status : MonoBehaviour
             if (currenttime < 0)
             {
                 stamina++;
-                image.fillAmount = 0;
+                staminaimage.fillAmount = 0;
                 currenttime = stamina_timer;
             }
             else
             {
                 currenttime -= Time.deltaTime;
-                image.fillAmount += 0.2f * Time.deltaTime;
+                staminaimage.fillAmount += 0.2f * Time.deltaTime;
                 
             }
         }

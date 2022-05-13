@@ -5,11 +5,7 @@ using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private Status status;
-    private float starttime;
-    [SerializeField]
-    private float cooltime = 5.0f;
-    
+    private Status status; 
     [SerializeField]
     private Image Hp_image;
 
@@ -28,16 +24,9 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (collider.CompareTag("Enemy"))
         {
-            if(starttime <= 0)
-            {
-                status.health--;
-                Hp_image.fillAmount -= 0.333f * 1;
-                starttime = cooltime;
-            }
-            else
-            {
-                starttime -= Time.deltaTime;
-            }               
+
+           status.health--;
+           Hp_image.fillAmount -= 0.333f * 1;
         }
     }
 }
