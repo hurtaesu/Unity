@@ -23,7 +23,6 @@ public class Item : MonoBehaviour
                 {
                     inventory.fullCheck[i] = true;
                     Instantiate(itemObject,inventory.slots[i].transform,false);
-                    itemObject.rectTransform.position = new Vector3(0, 0, 0);
                     Destroy(gameObject);
                     break;
                 }
