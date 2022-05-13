@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
     private Inventory inventory;
-    public GameObject itemObject;
+    public Image itemObject;
 
     private void Awake()
     {
@@ -21,7 +22,8 @@ public class Item : MonoBehaviour
                 if(inventory.fullCheck[i] == false)
                 {
                     inventory.fullCheck[i] = true;
-                    Instantiate(itemObject, inventory.slots[i].transform, false);
+                    Instantiate(itemObject,inventory.slots[i].transform,false);
+                    itemObject.rectTransform.position = new Vector3(0, 0, 0);
                     Destroy(gameObject);
                     break;
                 }
