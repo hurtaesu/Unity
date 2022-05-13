@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Status : MonoBehaviour
 {
-    public int health;
+    public int health = 3;
     public int stamina = 3;
     private float currenttime = 5;
     [SerializeField]

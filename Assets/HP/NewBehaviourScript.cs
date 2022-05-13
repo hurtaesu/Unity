@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public int Hp = 3;
+    private Status status;
+    private float starttime;
+    [SerializeField]
+    private float cooltime = 5.0f;
     
     [SerializeField]
     private Image Hp_image;
@@ -13,20 +16,28 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         Hp_image = GetComponent<Image>();
+        status = GetComponent<Status>();
     }
 
     void Update()
     {
-        Hp_reduce();
+
     }
 
-    public void Hp_reduce()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (collider.CompareTag("Enemy"))
         {
-            Hp--;
-            Hp_image.fillAmount -= 0.333f * 1;
-                
+            if(starttime <= 0)
+            {
+                status.health--;
+                Hp_image.fillAmount -= 0.333f * 1;
+                starttime = cooltime;
+            }
+            else
+            {
+                starttime -= Time.deltaTime;
+            }               
         }
     }
 }

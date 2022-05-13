@@ -17,7 +17,10 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enemy hit");
-        Destroy(collision.gameObject);
+        if(collision.CompareTag("Respawn"))
+        {
+            Debug.Log("Enemy hit");
+            Destroy(collision.gameObject);
+        }
     }
 }

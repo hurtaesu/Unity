@@ -9,12 +9,16 @@ public class Controller : MonoBehaviour
     [SerializeField]
     private GameObject bullet;
     private Animator animator;
+    [SerializeField]
+    private Inventory inventoryprefab;
+    Inventory inventory;
     // Start is called before the first frame update
     void Start()
     {
         movement = GetComponent<Movement>();
         status = GetComponent<Status>();
         animator = GetComponent<Animator>();
+        inventory = Instantiate(inventoryprefab);
 
     }
 
@@ -45,12 +49,16 @@ public class Controller : MonoBehaviour
 
             if(hitObject != null)
             {
+                bool GetItem = false;
                 if(hitObject.itemType == Scriptable.ItemType.WEAPON)
                 {
-                    Debug.Log("¹«±â È¹µæ");
+                    GetItem = inventory.AddItem(hitObject);
+                }
+                if(GetItem)
+                {
+                    collision.gameObject.SetActive(false);
                 }
             }
-            collision.gameObject.SetActive(false);
         }
     }
 }
