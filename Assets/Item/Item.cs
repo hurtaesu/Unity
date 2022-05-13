@@ -4,16 +4,30 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public Scriptable sword;
-    // Start is called before the first frame update
-    void Start()
+    private Inventory inventory;
+    public GameObject itemObject;
+
+    private void Awake()
     {
-        
+        inventory = GameObject.FindObjectOfType<Inventory>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.tag == "Player")
+        {
+            for(int i = 0;i < inventory.slots.Length;i++)
+            {
+                if(inventory.fullCheck[i] == false)
+                {
+                    inventory.fullCheck[i] = true;
+                    Instantiate(itemObject, inventory.slots[i].transform, false);
+                    Destroy(gameObject);
+                    break;
+                }
+            }
+        }
     }
+
+
 }

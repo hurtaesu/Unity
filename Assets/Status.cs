@@ -14,10 +14,8 @@ public class Status : MonoBehaviour
     private Image staminaimage;
     void Start()
     {
-        staminaimage = GetComponent<Image>();
+
     }
-
-
     void Update()
     {
         stamina_reload();

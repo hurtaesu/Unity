@@ -11,7 +11,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
-        Hp_image = GetComponent<Image>();
         status = GetComponent<Status>();
     }
 
