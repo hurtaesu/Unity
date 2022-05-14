@@ -1,34 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Item : MonoBehaviour
+public enum ItemType
 {
-    private Inventory inventory;
-    public Image itemObject;
+    Sworld
+}
 
-    private void Awake()
+[System.Serializable]
+public class Item
+{
+    public string itemName;
+    public Sprite itemImage;
+    public ItemType itemType;
+
+    public bool Use()
     {
-        inventory = GameObject.FindObjectOfType<Inventory>();
+        return false;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Player")
-        {
-            for(int i = 0;i < inventory.slots.Length;i++)
-            {
-                if(inventory.fullCheck[i] == false)
-                {
-                    inventory.fullCheck[i] = true;
-                    Instantiate(itemObject,inventory.slots[i].transform,false);
-                    Destroy(gameObject);
-                    break;
-                }
-            }
-        }
-    }
-
-
 }
