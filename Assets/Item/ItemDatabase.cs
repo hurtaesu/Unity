@@ -16,7 +16,7 @@ public class ItemDatabase : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < pos.Length; i++)
         {
             GameObject go = Instantiate(FieldItem,pos[i],Quaternion.identity);
             go.GetComponent<FieldItem>().SetItem(itemDB[0]);

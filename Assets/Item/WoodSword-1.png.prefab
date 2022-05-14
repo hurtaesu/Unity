@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3666393974738107147}
   - component: {fileID: 5805451687804378627}
   - component: {fileID: 1419998252947866749}
+  - component: {fileID: -212898684446228546}
   m_Layer: 0
   m_Name: WoodSword-1.png
   m_TagString: Item
@@ -117,3 +118,15 @@ MonoBehaviour:
     itemImage: {fileID: 0}
     itemType: 0
   image: {fileID: 3666393974738107147}
+--- !u!114 &-212898684446228546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583564772427233434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3178746273b9254692b99255285ad75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
