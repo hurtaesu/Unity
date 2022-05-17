@@ -32,13 +32,8 @@ public class Controller : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical"); 
         movement.Move(x);
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-           GameObject clone = Instantiate(bullet,transform.position,Quaternion.identity);
-            clone.GetComponent<bulletMovement>().Setup(new Vector3(x, 0, 0));
-        }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

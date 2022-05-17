@@ -54,9 +54,9 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("Item"))
+        if(collision.CompareTag("Item") && Input.GetKeyDown(KeyCode.E))
         {
            FieldItem fielditems =  collision.GetComponent<FieldItem>();
             if(AddItme(fielditems.GetItem()))
