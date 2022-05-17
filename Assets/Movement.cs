@@ -68,10 +68,6 @@ public class Movement : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         isdash = false;
-        if(isground == true)
-        {
-            animator.SetBool("jump", false);
-        }
     }
     public void jump()
     {

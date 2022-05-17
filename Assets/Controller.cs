@@ -26,6 +26,7 @@ public class Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             movement.jump();
+            animator.SetTrigger("jumping");
         }
 
         float x = Input.GetAxisRaw("Horizontal");
@@ -41,9 +42,9 @@ public class Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Item"))
+        if(collision.CompareTag("Ground"))
         {
-
+           animator.SetBool("jump", false);
         }
     }
 }
