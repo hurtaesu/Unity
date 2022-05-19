@@ -7,8 +7,6 @@ public class Controller : MonoBehaviour
 {
     private Movement movement;
     private Status status;
-    [SerializeField]
-    private GameObject bullet;
     private Animator animator;
 
     // Start is called before the first frame update
