@@ -81,7 +81,7 @@ public class Movement : MonoBehaviour
     {
         rigid.velocity = new Vector2(x * defaultspeed, rigid.velocity.y);
 
-        if (x == 1 || x == 0)
+        if (x == 1)
         {
             sprite.flipX = false;
         }
