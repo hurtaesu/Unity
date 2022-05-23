@@ -54,15 +54,22 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Item") && Input.GetKeyDown(KeyCode.E))
-        {
-           FieldItem fielditems =  collision.GetComponent<FieldItem>();
-            if(AddItme(fielditems.GetItem()))
-            {
-                fielditems.DestroyItem();
-            }
-        }
-    }
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    Debug.Log("콜라이더");
+    //    if(Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        Debug.Log("아이템");
+    //        if (collision.CompareTag("Item"))
+    //        {
+    //            Debug.Log("아이템획득");
+    //            FieldItem fielditems = collision.GetComponent<FieldItem>();
+    //            if (AddItme(fielditems.GetItem()))
+    //            {
+    //                Debug.Log("아이템 파괴");
+    //                fielditems.DestroyItem();
+    //            }
+    //        }
+    //    }  
+    //}
 }

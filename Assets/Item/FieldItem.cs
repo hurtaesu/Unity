@@ -24,4 +24,13 @@ public class FieldItem : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("아이템");
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("e누름");
+        }
+    }
 }
