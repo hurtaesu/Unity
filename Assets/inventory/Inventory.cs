@@ -6,6 +6,8 @@ public class Inventory : MonoBehaviour
 {
     #region Singleton
     public static Inventory Instance;
+    private bool isItem;
+    private FieldItem fielditems;
     private void Awake()
     {
         if(Instance != null)
@@ -54,22 +56,34 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    Debug.Log("콜라이더");
-    //    if(Input.GetKeyDown(KeyCode.E))
-    //    {
-    //        Debug.Log("아이템");
-    //        if (collision.CompareTag("Item"))
-    //        {
-    //            Debug.Log("아이템획득");
-    //            FieldItem fielditems = collision.GetComponent<FieldItem>();
-    //            if (AddItme(fielditems.GetItem()))
-    //            {
-    //                Debug.Log("아이템 파괴");
-    //                fielditems.DestroyItem();
-    //            }
-    //        }
-    //    }  
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Item"))
+        {
+            isItem = true;
+        }
+        fielditems = collision.GetComponent<FieldItem>();
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isItem = false;
+    }
+
+    private void Update()
+    {
+        if(isItem == true)
+        {
+            Debug.Log("아이템");
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                            if (AddItme(fielditems.GetItem()))
+                            {
+                                Debug.Log("아이템 파괴");
+                                fielditems.DestroyItem();
+                            }
+            }
+        }
+    }
 }
