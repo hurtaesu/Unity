@@ -30,6 +30,11 @@ public class Controller : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical"); 
         movement.Move(x);
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("Attack");
+        }
     }
 
 
@@ -40,4 +45,6 @@ public class Controller : MonoBehaviour
            animator.SetBool("jump", false);
         }
     }
+
+
 }
