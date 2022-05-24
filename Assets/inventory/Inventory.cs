@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    private AnimatorController animatorController;
+    WeaponDatabase weaponDatabase;
     #region Singleton
     public static Inventory Instance;
     private bool isItem;
@@ -75,14 +77,12 @@ public class Inventory : MonoBehaviour
     {
         if(isItem == true)
         {
-            Debug.Log("아이템");
             if(Input.GetKeyDown(KeyCode.E))
             {
-                            if (AddItme(fielditems.GetItem()))
-                            {
-                                Debug.Log("아이템 파괴");
-                                fielditems.DestroyItem();
-                            }
+                if (AddItme(fielditems.GetItem()))
+                   {
+                      fielditems.DestroyItem();
+                   }
             }
         }
     }

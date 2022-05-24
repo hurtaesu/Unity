@@ -19,7 +19,7 @@ public class ItemDatabase : MonoBehaviour
         for(int i = 0; i < pos.Length; i++)
         {
             GameObject go = Instantiate(FieldItem,pos[i],Quaternion.identity);
-            go.GetComponent<FieldItem>().SetItem(itemDB[0]);
+            go.GetComponent<FieldItem>().SetItem(itemDB[1]);
         }
     }
 }

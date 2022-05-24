@@ -1409,6 +1409,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.2}
   m_EdgeRadius: 0
+--- !u!1 &661285781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661285783}
+  - component: {fileID: 661285782}
+  m_Layer: 0
+  m_Name: WeaponDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &661285782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661285781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f589edf4646ae49b22c1a48bb1c8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sword: 0
+  Wand: 0
+  Shield: 0
+  Damage: 0
+  AttackSpeed: 0
+--- !u!4 &661285783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661285781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4477621, y: 2.9040527, z: -463.54446}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &665360800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2611,6 +2659,7 @@ GameObject:
   - component: {fileID: 1294744635}
   - component: {fileID: 1294744640}
   - component: {fileID: 1294744631}
+  - component: {fileID: 1294744641}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2752,7 +2801,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1294744635
 MonoBehaviour:
@@ -2850,6 +2899,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1294744641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294744629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6727399152cd34b4dbdc307150474b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDatabase: {fileID: 661285782}
+  animatorControllers:
+  - {fileID: 9100000, guid: 975f9796ed41ba941a26b6b43313546a, type: 2}
+  - {fileID: 9100000, guid: 0959361bdca0cc846a96ee2f5a26d554, type: 2}
 --- !u!1 &1354872250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,14 +3122,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FieldItem: {fileID: 583564772427233434, guid: cfac031b5578fc44692fc27917defaaf, type: 3}
   pos:
-  - {x: -1, y: 2, z: 0}
-  - {x: 1, y: 2, z: 0}
-  - {x: 1, y: 4, z: 0}
-  - {x: -3, y: 2, z: 0}
+  - {x: 1, y: 3, z: 0}
   itemDB:
   - itemName: WoodSwrold
     itemImage: {fileID: 21300000, guid: f8d90ebaae876f04ab7ca7ba9cf736fe, type: 3}
     itemType: 0
+  - itemName: Test
+    itemImage: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
+    itemType: 1
 --- !u!4 &1454312822
 Transform:
   m_ObjectHideFlags: 0
