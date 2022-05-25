@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private AnimatorController animatorController;
+    [SerializeField]
     WeaponDatabase weaponDatabase;
+    private AnimatorController animatorController;
     #region Singleton
     public static Inventory Instance;
     private bool isItem;
@@ -81,7 +82,20 @@ public class Inventory : MonoBehaviour
             {
                 if (AddItme(fielditems.GetItem()))
                    {
-                      fielditems.DestroyItem();
+                    if(fielditems.item.itemType == ItemType.Sworld)
+                    {
+                        weaponDatabase.Sword = true;
+                        weaponDatabase.Wand = false;
+                        weaponDatabase.Shield = false;
+                    }
+
+                    if (fielditems.item.itemType == ItemType.Test)
+                    {
+                        weaponDatabase.Sword = false;
+                        weaponDatabase.Wand = true;
+                        weaponDatabase.Shield = false;
+                    }
+                    fielditems.DestroyItem();
                    }
             }
         }

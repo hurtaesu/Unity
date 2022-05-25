@@ -19,14 +19,19 @@ public class AnimatorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (weaponDatabase.Sword == true)
+        if (weaponDatabase.Sword == true && weaponDatabase.Wand == false && weaponDatabase.Shield == false)
         {
             animator.runtimeAnimatorController = animatorControllers[0];
         }
 
-        if (weaponDatabase.Wand == true)
+        if (weaponDatabase.Sword == false && weaponDatabase.Wand == true && weaponDatabase.Shield == false)
         {
             animator.runtimeAnimatorController = animatorControllers[1];
+        }
+
+        if (weaponDatabase.Sword == false && weaponDatabase.Wand == false && weaponDatabase.Shield == true)
+        {
+            animator.runtimeAnimatorController = animatorControllers[2];
         }
     }
 }

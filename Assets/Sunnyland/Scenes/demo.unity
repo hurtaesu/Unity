@@ -2828,6 +2828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ef1b25bf888554a8b58c9fae459cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponDatabase: {fileID: 661285782}
   items: []
 --- !u!114 &1294744637
 MonoBehaviour:
@@ -2915,6 +2916,7 @@ MonoBehaviour:
   animatorControllers:
   - {fileID: 9100000, guid: 975f9796ed41ba941a26b6b43313546a, type: 2}
   - {fileID: 9100000, guid: 0959361bdca0cc846a96ee2f5a26d554, type: 2}
+  - {fileID: 9100000, guid: 2f0c88f84fe869c41bda00cb049194f1, type: 2}
 --- !u!1 &1354872250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,6 +3125,10 @@ MonoBehaviour:
   FieldItem: {fileID: 583564772427233434, guid: cfac031b5578fc44692fc27917defaaf, type: 3}
   pos:
   - {x: 1, y: 3, z: 0}
+  - {x: 4, y: 3, z: 0}
+  - {x: -2, y: 3, z: 0}
+  - {x: -2, y: 5, z: 0}
+  - {x: 1, y: 5, z: 0}
   itemDB:
   - itemName: WoodSwrold
     itemImage: {fileID: 21300000, guid: f8d90ebaae876f04ab7ca7ba9cf736fe, type: 3}
