@@ -9,6 +9,9 @@ public class Controller : MonoBehaviour
     private Status status;
     private Animator animator;
 
+    [SerializeField]
+    WeaponDatabase weaponDatabase;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +34,14 @@ public class Controller : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical"); 
         movement.Move(x);
 
-        if(Input.GetMouseButtonDown(0))
-        {
+        if(weaponDatabase.AttackCooltime < 0 && Input.GetMouseButtonDown(0))
+        { 
             animator.SetTrigger("Attack");
+            weaponDatabase.AttackCooltime = 1;
+        }
+        else
+        {
+            weaponDatabase.AttackCooltime -= Time.deltaTime;
         }
     }
 
@@ -45,6 +53,4 @@ public class Controller : MonoBehaviour
            animator.SetBool("jump", false);
         }
     }
-
-
 }

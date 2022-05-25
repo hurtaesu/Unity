@@ -25,6 +25,8 @@ public class Movement : MonoBehaviour
     private bool isground;
     private Vector3 footposition;
 
+
+
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -46,7 +48,6 @@ public class Movement : MonoBehaviour
         {
             jumpcount = 2;
         }
-
         if(Input.GetKeyDown(KeyCode.LeftShift) && status.stamina > 0)
         {
             isdash = true;
@@ -76,6 +77,7 @@ public class Movement : MonoBehaviour
         jumpcount--;
         animator.SetBool("jump", true);
     }
+
 
     public void Move(float x)
     {

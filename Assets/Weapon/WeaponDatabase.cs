@@ -10,4 +10,6 @@ public class WeaponDatabase : MonoBehaviour
 
     public int Damage; //공격력
     public float AttackSpeed; //공속
+    public float AttackCooltime;//공격 쿨타임;
+
 }
