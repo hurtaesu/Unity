@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private LayerMask groundlayer;
     private BoxCollider2D boxCollider;
-    private bool isground;
+    public bool isground;
     private Vector3 footposition;
 
 

@@ -10,6 +10,8 @@ public class Controller : MonoBehaviour
     private Animator animator;
 
     [SerializeField]
+    Attack attack;
+    [SerializeField]
     WeaponDatabase weaponDatabase;
 
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             movement.jump();
@@ -31,18 +34,13 @@ public class Controller : MonoBehaviour
         }
 
         float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical"); 
         movement.Move(x);
 
-        if(weaponDatabase.AttackCooltime < 0 && Input.GetMouseButtonDown(0))
-        { 
-            animator.SetTrigger("Attack");
-            weaponDatabase.AttackCooltime = 1;
-        }
-        else
+        if(movement.isground == true)
         {
-            weaponDatabase.AttackCooltime -= Time.deltaTime;
+           attackspeed(x);
         }
+
     }
 
 
@@ -53,4 +51,19 @@ public class Controller : MonoBehaviour
            animator.SetBool("jump", false);
         }
     }
+
+    private void attackspeed(float x)
+    {
+        if (weaponDatabase.AttackCooltime < 0 && Input.GetMouseButtonDown(0))
+        {
+            attack.Attack_(x);
+            animator.SetTrigger("Attack");
+            weaponDatabase.AttackCooltime = 1;
+        }
+        else
+        {
+            weaponDatabase.AttackCooltime -= Time.deltaTime;
+        }
+    }
+    
 }
