@@ -35,7 +35,7 @@ public class Controller : MonoBehaviour
 
         float x = Input.GetAxisRaw("Horizontal");
         movement.Move(x);
-
+        //공격
         if(movement.isground == true)
         {
            attackspeed(x);
@@ -52,11 +52,16 @@ public class Controller : MonoBehaviour
         }
     }
 
+
+    //공격함수
     private void attackspeed(float x)
     {
         if (weaponDatabase.AttackCooltime < 0 && Input.GetMouseButtonDown(0))
         {
-            attack.Attack_(x);
+            if(weaponDatabase.Sword == true)
+            {
+               attack.Attack_Sword(x);
+            }
             animator.SetTrigger("Attack");
             weaponDatabase.AttackCooltime = 1;
         }

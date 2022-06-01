@@ -19,7 +19,7 @@ public class Attack : MonoBehaviour
 
     }
 
-    public void Attack_(float x)
+    public void Attack_Sword(float x)
     {
         if (x == 0)
         {

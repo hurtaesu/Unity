@@ -39,15 +39,18 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        //바닥 체크
         Bounds bounds = boxCollider.bounds;
         footposition = new Vector2(bounds.center.x, bounds.min.y);
         isground = Physics2D.OverlapCircle(footposition, 0.1f, groundlayer);
 
-
+        //최대 점프
         if (isground == true && jumpcount <= 0)
         {
             jumpcount = 2;
         }
+
+        //대쉬
         if(Input.GetKeyDown(KeyCode.LeftShift) && status.stamina > 0)
         {
             isdash = true;
@@ -70,6 +73,8 @@ public class Movement : MonoBehaviour
         }
         isdash = false;
     }
+
+    //점프
     public void jump()
     {
         if (jumpcount > 0)
@@ -79,6 +84,8 @@ public class Movement : MonoBehaviour
     }
 
 
+
+    //움직임
     public void Move(float x)
     {
         rigid.velocity = new Vector2(x * defaultspeed, rigid.velocity.y);

@@ -1245,6 +1245,8 @@ GameObject:
   - component: {fileID: 641339856}
   - component: {fileID: 641339852}
   - component: {fileID: 641339857}
+  - component: {fileID: 641339858}
+  - component: {fileID: 641339859}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -1269,7 +1271,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35, y: 0.32}
+    oldSize: {x: 0.4, y: 0.41}
     newSize: {x: 0.35, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1277,14 +1279,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.04, y: 0.09}
-      - {x: -0.13, y: 0.03}
-      - {x: -0.13, y: -0.11}
-      - {x: -0.13, y: -0.11}
-      - {x: 0.114999995, y: -0.11}
-      - {x: 0.13, y: -0.08}
-      - {x: 0.13, y: 0.01}
-      - {x: 0.055, y: 0.09}
+    - - {x: -0.12, y: 0.18583605}
+      - {x: -0.08698416, y: 0.014118694}
+      - {x: -0.16, y: -0.047027133}
+      - {x: -0.17, y: -0.12612197}
+      - {x: -0.07226188, y: -0.18899457}
+      - {x: 0.0089237, y: -0.19005641}
+      - {x: 0.08478321, y: -0.14493091}
+      - {x: 0.03843708, y: -0.026154477}
+      - {x: 0.15, y: 0.103611134}
 --- !u!212 &641339853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1325,7 +1328,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 86ca59b9bca0e409b9ba2784fbe69f01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f240dfd4814d34d55a9b033f3c9d8a60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1344,7 +1347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641339851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.82, y: 1.66, z: 0}
+  m_LocalPosition: {x: 5.762, y: 2.575, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1382,7 +1385,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &641339857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1396,19 +1399,52 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.02}
+  m_Offset: {x: -0.026701748, y: -0.031443626}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35, y: 0.32}
+    oldSize: {x: 0.4, y: 0.41}
     newSize: {x: 0.35, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.2}
+  m_Size: {x: 0.24659652, y: 0.30833274}
   m_EdgeRadius: 0
+--- !u!95 &641339858
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641339851}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b74c38c21054fcd4b8043f675d5b3a74, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &641339859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641339851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b6d19d1354ae44db26367f3c7e76e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy_speed: 3
+  Move_Dir: 0
 --- !u!1001 &665360800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3142,11 +3178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FieldItem: {fileID: 583564772427233434, guid: cfac031b5578fc44692fc27917defaaf, type: 3}
-  pos:
-  - {x: 1, y: 3, z: 0}
-  - {x: -2, y: 3, z: 0}
-  - {x: -2, y: 5, z: 0}
-  - {x: 1, y: 5, z: 0}
+  pos: []
   itemDB:
   - itemName: WoodSwrold
     itemImage: {fileID: 21300000, guid: f8d90ebaae876f04ab7ca7ba9cf736fe, type: 3}
