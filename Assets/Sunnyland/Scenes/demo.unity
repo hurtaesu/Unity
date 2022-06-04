@@ -2510,6 +2510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1294744638}
+  sprite: {fileID: 1294744633}
 --- !u!1 &1128877225
 GameObject:
   m_ObjectHideFlags: 0

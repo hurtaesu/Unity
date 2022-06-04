@@ -32,7 +32,6 @@ public class Controller : MonoBehaviour
             movement.jump();
             animator.SetTrigger("jumping");
         }
-
         float x = Input.GetAxisRaw("Horizontal");
         movement.Move(x);
         //АјАн
@@ -40,7 +39,6 @@ public class Controller : MonoBehaviour
         {
            attackspeed(x);
         }
-
     }
 
 
