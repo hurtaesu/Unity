@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, new Vector3(-1, 0, 0) * 2, new Color(0, 1, 0));
+
     }
 
     public void Attack_Sword(float x)

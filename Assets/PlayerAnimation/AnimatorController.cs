@@ -9,11 +9,14 @@ public class AnimatorController : MonoBehaviour
     [SerializeField]
     RuntimeAnimatorController[] animatorControllers;
 
+    private Status status;
+
     Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        status = GetComponent<Status>();
     }
 
     // Update is called once per frame

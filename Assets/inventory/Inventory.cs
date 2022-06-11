@@ -82,19 +82,7 @@ public class Inventory : MonoBehaviour
             {
                 if (AddItme(fielditems.GetItem()))
                    {
-                    if(fielditems.item.itemType == ItemType.Sworld)
-                    {
-                        weaponDatabase.Sword = true;
-                        weaponDatabase.Wand = false;
-                        weaponDatabase.Shield = false;
-                    }
-
-                    if (fielditems.item.itemType == ItemType.Test)
-                    {
-                        weaponDatabase.Sword = false;
-                        weaponDatabase.Wand = true;
-                        weaponDatabase.Shield = false;
-                    }
+                    weaponDatabase.ChangeWeapon(fielditems.item.itemType);
                     fielditems.DestroyItem();
                    }
             }

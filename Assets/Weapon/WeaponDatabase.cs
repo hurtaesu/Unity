@@ -12,4 +12,31 @@ public class WeaponDatabase : MonoBehaviour
     public float AttackSpeed; //공속
     public float AttackCooltime;//공격 쿨타임;
 
+    private Status status;
+    private void Awake()
+    {
+        status = GetComponent<Status>();
+    }
+
+    public void ChangeWeapon(ItemType itemType)
+    {
+        if(itemType == ItemType.Sworld)
+        {
+            Sword = true;
+            Wand = false;
+            Shield = false;
+
+            status.stamina = 1;
+            status.stamina_limit = 1;
+        }
+        else if(itemType == ItemType.Test)
+        {
+            Sword = false;
+            Wand = true;
+            Shield = false;
+
+            status.stamina = 3;
+            status.stamina_limit = 3;
+        }
+    }
 }

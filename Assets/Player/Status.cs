@@ -7,11 +7,14 @@ public class Status : MonoBehaviour
 {
     public int health = 3;
     public int stamina = 3;
+    public int stamina_limit = 3;
     private float currenttime = 5;
     [SerializeField]
     private float stamina_timer;
     [SerializeField]
     private Image staminaimage;
+
+    public GameObject particle;
     void Start()
     {
 
@@ -23,22 +26,29 @@ public class Status : MonoBehaviour
 
     public void stamina_reload()
     {
-        if (stamina < 3)
+        if (stamina < stamina_limit)
         {
             if (currenttime < 0)
             {
+                particle.SetActive(true);
                 stamina++;
-                staminaimage.fillAmount = 0;
                 currenttime = stamina_timer;
             }
             else
             {
+                particle.SetActive(false);
                 currenttime -= Time.deltaTime;
                 staminaimage.fillAmount += 0.2f * Time.deltaTime;
-                
+            }
+            if(staminaimage.fillAmount == 1)
+            {
+                staminaimage.fillAmount = 0;
             }
         }
+        else
+        {
+            particle.SetActive(false);
+            staminaimage.fillAmount = 1;
+        }
     }
-
-
 }
