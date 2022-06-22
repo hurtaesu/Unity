@@ -13,8 +13,6 @@ public class Status : MonoBehaviour
     private float stamina_timer;
     [SerializeField]
     private Image staminaimage;
-
-    public GameObject particle;
     void Start()
     {
 
@@ -30,13 +28,11 @@ public class Status : MonoBehaviour
         {
             if (currenttime < 0)
             {
-                particle.SetActive(true);
                 stamina++;
                 currenttime = stamina_timer;
             }
             else
             {
-                particle.SetActive(false);
                 currenttime -= Time.deltaTime;
                 staminaimage.fillAmount += 0.2f * Time.deltaTime;
             }
@@ -44,11 +40,6 @@ public class Status : MonoBehaviour
             {
                 staminaimage.fillAmount = 0;
             }
-        }
-        else
-        {
-            particle.SetActive(false);
-            staminaimage.fillAmount = 1;
         }
     }
 }

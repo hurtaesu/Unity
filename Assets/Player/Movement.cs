@@ -53,6 +53,7 @@ public class Movement : MonoBehaviour
         //´ë½¬
         if(Input.GetKeyDown(KeyCode.LeftShift) && status.stamina > 0)
         {
+            animator.SetTrigger("dash");
             isdash = true;
             status.stamina--;
         }

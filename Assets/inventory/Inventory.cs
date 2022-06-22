@@ -42,7 +42,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        SlotCnt = 2;
+        SlotCnt = 14;
     }
 
     public bool AddItme(Item _itme)
@@ -61,7 +61,7 @@ public class Inventory : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Item"))
+        if(collision.CompareTag("Ring"))
         {
             isItem = true;
         }
