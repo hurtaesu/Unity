@@ -50,18 +50,31 @@ public class Movement : MonoBehaviour
             jumpcount = 2;
         }
 
+    }
+
+    //점프
+    public void jump()
+    {
+        if (jumpcount > 0)
+        rigid.velocity = Vector2.up * jumpforce;
+        jumpcount--;
+        animator.SetBool("jump", true);
+    }
+
+    public void dash(float x)
+    {
         //대쉬
-        if(Input.GetKeyDown(KeyCode.LeftShift) && status.stamina > 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && status.stamina > 0 && x != 0)
         {
             animator.SetTrigger("dash");
             isdash = true;
             status.stamina--;
         }
-        if(dashtime <= 0)
+        if (dashtime <= 0)
         {
             defaultspeed = movespeed;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
-            if(isdash)
+            if (isdash)
             {
                 dashtime = startdashtime;
             }
@@ -74,17 +87,6 @@ public class Movement : MonoBehaviour
         }
         isdash = false;
     }
-
-    //점프
-    public void jump()
-    {
-        if (jumpcount > 0)
-        rigid.velocity = Vector2.up * jumpforce;
-        jumpcount--;
-        animator.SetBool("jump", true);
-    }
-
-
 
     //움직임
     public void Move(float x)

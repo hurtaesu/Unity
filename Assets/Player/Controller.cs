@@ -34,6 +34,7 @@ public class Controller : MonoBehaviour
         }
         float x = Input.GetAxisRaw("Horizontal");
         movement.Move(x);
+        movement.dash(x);
         //АјАн
         if(movement.isground == true)
         {
