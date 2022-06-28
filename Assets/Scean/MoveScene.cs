@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class MoveScene : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,12 +16,10 @@ public class Enemy : MonoBehaviour
     {
         
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Respawn"))
-        {
-            Debug.Log("Enemy hit");
-            Destroy(collision.gameObject);
-        }
+        Debug.Log("∏  ¿Ãµø");
+        SceneManager.LoadScene("Stage 1");
     }
 }

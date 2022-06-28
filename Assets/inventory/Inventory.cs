@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     #region Singleton
     public static Inventory Instance;
     private bool isItem;
+    public bool isWeapon;
     private FieldItem fielditems;
     private void Awake()
     {
@@ -65,6 +66,11 @@ public class Inventory : MonoBehaviour
         {
             isItem = true;
         }
+        else if(collision.CompareTag("Weapon"))
+        {
+            isItem = true;
+            isWeapon = true;
+        }
         fielditems = collision.GetComponent<FieldItem>();
 
     }
@@ -72,6 +78,7 @@ public class Inventory : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isItem = false;
+        isWeapon = false;
     }
 
     private void Update()
@@ -80,11 +87,18 @@ public class Inventory : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                if (AddItme(fielditems.GetItem()))
-                   {
+                if(isWeapon == true)
+                {
                     weaponDatabase.ChangeWeapon(fielditems.item.itemType);
                     fielditems.DestroyItem();
-                   }
+                }
+                else
+                {
+                    if (AddItme(fielditems.GetItem()))
+                    {
+                        fielditems.DestroyItem();
+                    }
+                }
             }
         }
     }

@@ -8,6 +8,7 @@ TagManager:
   - Item
   - bullet
   - Ground
+  - Weapon
   - Ring
   layers:
   - Default

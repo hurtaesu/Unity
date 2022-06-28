@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1419998252947866749}
   m_Layer: 0
   m_Name: Field Item
-  m_TagString: Ring
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

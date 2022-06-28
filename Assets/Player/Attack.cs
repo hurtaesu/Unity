@@ -39,7 +39,10 @@ public class Attack : MonoBehaviour
         if (hit.collider != null)
         {
             Debug.Log("Àû¿¡ ´êÀ½");
-            Destroy(hit.collider.gameObject);
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
+            hit.collider.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+            hit.collider.gameObject.GetComponent<Enemy_Ai>().enabled = false;
+            hit.collider.gameObject.GetComponent<Animator>().enabled = false;
         }
     }
 }
