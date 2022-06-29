@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float jumpforce = 8.0f;
     public float dashforce = 10.0f;
-    public float jumpcount = 2;
+    public float jumpcount = 1;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
     private Status status;
@@ -45,20 +45,22 @@ public class Movement : MonoBehaviour
         isground = Physics2D.OverlapCircle(footposition, 0.1f, groundlayer);
 
         //최대 점프
-        if (isground == true && jumpcount <= 0)
+        if (!animator.GetBool("jump"))
         {
             jumpcount = 2;
         }
-
     }
 
     //점프
     public void jump()
     {
         if (jumpcount > 0)
-        rigid.velocity = Vector2.up * jumpforce;
-        jumpcount--;
-        animator.SetBool("jump", true);
+        {
+            rigid.velocity = Vector2.up * jumpforce;
+            jumpcount--;
+            animator.SetBool("jump", true);
+            animator.SetTrigger("jumping");
+        }
     }
 
     public void dash(float x)

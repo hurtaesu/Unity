@@ -30,7 +30,6 @@ public class Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             movement.jump();
-            animator.SetTrigger("jumping");
         }
         float x = Input.GetAxisRaw("Horizontal");
         movement.Move(x);

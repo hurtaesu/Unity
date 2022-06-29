@@ -43,6 +43,7 @@ public class Attack : MonoBehaviour
             hit.collider.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
             hit.collider.gameObject.GetComponent<Enemy_Ai>().enabled = false;
             hit.collider.gameObject.GetComponent<Animator>().enabled = false;
+            hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }
