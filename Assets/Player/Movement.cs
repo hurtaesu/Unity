@@ -44,11 +44,6 @@ public class Movement : MonoBehaviour
         footposition = new Vector2(bounds.center.x, bounds.min.y);
         isground = Physics2D.OverlapCircle(footposition, 0.1f, groundlayer);
 
-        //최대 점프
-        if (!animator.GetBool("jump"))
-        {
-            jumpcount = 2;
-        }
     }
 
     //점프
@@ -75,6 +70,7 @@ public class Movement : MonoBehaviour
         if (dashtime <= 0)
         {
             defaultspeed = movespeed;
+            gameObject.GetComponent<NewBehaviourScript>().enabled = true;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
             if (isdash)
             {
@@ -85,6 +81,7 @@ public class Movement : MonoBehaviour
         {
             dashtime -= Time.deltaTime;
             defaultspeed = dashforce;
+            gameObject.GetComponent<NewBehaviourScript>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         isdash = false;

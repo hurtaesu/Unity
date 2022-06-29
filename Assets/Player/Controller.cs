@@ -35,10 +35,8 @@ public class Controller : MonoBehaviour
         movement.Move(x);
         movement.dash(x);
         //공격
-        if(movement.isground == true)
-        {
-           attackspeed(x);
-        }
+        attackspeed(x);
+
     }
 
 
@@ -47,6 +45,8 @@ public class Controller : MonoBehaviour
         if(collision.CompareTag("Ground"))
         {
            animator.SetBool("jump", false);
+            //최대 점프
+            movement.jumpcount = 2;
         }
     }
 
