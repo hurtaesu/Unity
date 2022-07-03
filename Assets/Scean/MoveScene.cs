@@ -14,12 +14,17 @@ public class MoveScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("∏  ¿Ãµø");
         SceneManager.LoadScene("Stage 1");
+    }
+
+    public void MoveToGame()
+    {
+        SceneManager.LoadScene("Lobby");
     }
 }
