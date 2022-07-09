@@ -34,7 +34,7 @@ public class Attack : MonoBehaviour
 
         Debug.DrawRay(transform.position, new Vector3(x, 0, 0)*2, new Color(0, 1, 0));
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector3(x, 0, 0),2.5f,LayerMask.GetMask("Enemy"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector3(x, 0, 0),1.0f,LayerMask.GetMask("Enemy"));
 
         if (hit.collider != null)
         {

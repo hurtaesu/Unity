@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     private SpriteRenderer sprite;
     private Status status;
     public bool isdash;
+    public bool isdodge;
     [SerializeField]
     private float startdashtime;
     private float dashtime;
@@ -64,14 +65,14 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && status.stamina > 0 && x != 0)
         {
             animator.SetTrigger("dash");
-            isdash = true;
             status.stamina--;
+            isdash = true;
         }
         if (dashtime <= 0)
         {
             defaultspeed = movespeed;
             gameObject.GetComponent<NewBehaviourScript>().enabled = true;
-            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            isdodge = false;
             if (isdash)
             {
                 dashtime = startdashtime;
@@ -82,7 +83,7 @@ public class Movement : MonoBehaviour
             dashtime -= Time.deltaTime;
             defaultspeed = dashforce;
             gameObject.GetComponent<NewBehaviourScript>().enabled = false;
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            isdodge = true;
         }
         isdash = false;
     }

@@ -2329,6 +2329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy_speed: 1
   Move_Dir: 0
+  movement: {fileID: 1294744637}
 --- !u!1001 &665360800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4685,6 +4686,7 @@ MonoBehaviour:
   dashforce: 10
   jumpcount: 2
   isdash: 0
+  isdodge: 0
   startdashtime: 0.1
   groundlayer:
     serializedVersion: 2

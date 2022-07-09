@@ -8,6 +8,8 @@ public class Enemy_Ai : MonoBehaviour
     public int Move_Dir;
     SpriteRenderer sprite;
     Rigidbody2D rigid;
+    [SerializeField]
+    Movement movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,14 @@ public class Enemy_Ai : MonoBehaviour
 
     void Update()
     {
+        if(movement.isdodge == true)
+        {
+            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        }
+        else
+        {
+            gameObject.GetComponent<PolygonCollider2D>().enabled = true;
+        }
         //ÁÂ¿ìÀüÈ¯
         if (Move_Dir == 1)
         {
