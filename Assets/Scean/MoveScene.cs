@@ -20,7 +20,7 @@ public class MoveScene : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("∏  ¿Ãµø");
-        SceneManager.LoadScene("Stage 1");
+        SceneManager.LoadScene(Random.Range(2,6));
     }
 
     public void MoveToGame()
