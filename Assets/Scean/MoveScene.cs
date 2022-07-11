@@ -19,6 +19,7 @@ public class MoveScene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        collision.gameObject.GetComponent<Transform>().position = new Vector3(0, 1, 0);
         Debug.Log("∏  ¿Ãµø");
         SceneManager.LoadScene(Random.Range(2,6));
     }
