@@ -21,11 +21,11 @@ public class MoveScene : MonoBehaviour
     {
         collision.gameObject.GetComponent<Transform>().position = new Vector3(0, 1, 0);
         Debug.Log("∏  ¿Ãµø");
-        SceneManager.LoadScene(Random.Range(2,6));
+        SceneManager.LoadScene(Random.Range(3,7));
     }
 
     public void MoveToGame()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("Creat_Player");
     }
 }

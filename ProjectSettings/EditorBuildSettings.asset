@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scean/Title.unity
     guid: 5cdd710185052fd478ac2d032011181d
   - enabled: 1
+    path: Assets/Scean/Creat_Player.unity
+    guid: 1df3db585bda6134bb95c3fc98c51c4a
+  - enabled: 1
     path: Assets/Scean/Lobby.unity
     guid: cbd2611183a8d41e8b5ae48b2b35bbf1
   - enabled: 1
