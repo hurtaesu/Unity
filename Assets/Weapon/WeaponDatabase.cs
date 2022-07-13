@@ -12,8 +12,6 @@ public class WeaponDatabase : MonoBehaviour
     public int Damage; //공격력
     public float AttackSpeed; //공속
     public float AttackCooltime;//공격 쿨타임;
-    [SerializeField]
-    Animator animator;
 
     private Status status;
     private void Awake()
@@ -21,7 +19,7 @@ public class WeaponDatabase : MonoBehaviour
         status = GetComponent<Status>();
     }
 
-    public void ChangeWeapon(ItemType itemType)
+    public void ChangeWeapon(ItemType itemType) //필요 없어질 수도 있음
     {
         if(itemType == ItemType.Sworld)
         {
@@ -51,7 +49,7 @@ public class WeaponDatabase : MonoBehaviour
 
         status.stamina = 1;
         status.stamina_limit = 1;
-        animator.SetTrigger("Change");
+        SceneManager.LoadScene("Lobby");
     }
 
     public void ChangeWand()
@@ -62,6 +60,6 @@ public class WeaponDatabase : MonoBehaviour
 
         status.stamina = 3;
         status.stamina_limit = 3;
-        animator.SetTrigger("Change");
+        SceneManager.LoadScene("Lobby");
     }
 }

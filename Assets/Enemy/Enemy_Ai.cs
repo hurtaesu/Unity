@@ -8,13 +8,13 @@ public class Enemy_Ai : MonoBehaviour
     public int Move_Dir;
     SpriteRenderer sprite;
     Rigidbody2D rigid;
-    [SerializeField]
     Movement movement;
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        movement = GameObject.Find("Player").GetComponent<Movement>();
         Invoke("Think", 3);
     }
 

@@ -18,6 +18,7 @@ public class Restart_Check : MonoBehaviour
     {
         if(gameover && Input.GetKeyDown(KeyCode.R))
         {
+            GameObject.Find("Player").GetComponent<Transform>().position = new Vector3(0, 2, 0);
             Application.LoadLevel(Application.loadedLevel);
         }
     }
