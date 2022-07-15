@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scean/Lobby.unity
     guid: cbd2611183a8d41e8b5ae48b2b35bbf1
   - enabled: 1
+    path: Assets/Scean/PlainTown.unity
+    guid: b19be10fd8ec5f4418f352fc92bf64ea
+  - enabled: 1
     path: Assets/Scean/Stage/Stage 1.unity
     guid: 216db02ecc010744f9972ea8e1d0c61a
   - enabled: 1

@@ -134,9 +134,9 @@ GameObject:
   - component: {fileID: 640131111}
   - component: {fileID: 640131110}
   - component: {fileID: 640131112}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,9 +220,9 @@ GameObject:
   - component: {fileID: 2093448776}
   - component: {fileID: 2093448775}
   - component: {fileID: 2093448774}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
