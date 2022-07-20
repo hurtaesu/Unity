@@ -21,7 +21,7 @@ public class MoveScene : MonoBehaviour
     {
         collision.gameObject.GetComponent<Transform>().position = new Vector3(0, 1, 0);
         Debug.Log("∏  ¿Ãµø");
-        SceneManager.LoadScene(Random.Range(4,8));
+        SceneManager.LoadScene(4);
     }
 
 
