@@ -1,0 +1,347 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3923538256325525405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7999380454510332518}
+  m_Layer: 0
+  m_Name: Wheat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7999380454510332518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923538256325525405}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.198, y: 0.078, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children:
+  - {fileID: 8610737130564382735}
+  - {fileID: 6673297775280496548}
+  - {fileID: 6635127471130742858}
+  - {fileID: 5335639887966163211}
+  - {fileID: 3729903086109588858}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3213388722716409374
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7999380454510332518}
+    m_Modifications:
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6599998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.119703
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 250.24542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110126698356207190, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+      propertyPath: m_Name
+      value: PF Village Props - Wheat C
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+--- !u!4 &6635127471130742858 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8110126698356207188, guid: 924118ea6eca18f459f67d54f8640858, type: 3}
+  m_PrefabInstance: {fileID: 3213388722716409374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3724190270122430352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7999380454510332518}
+    m_Modifications:
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3849993
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.119703
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 250.24542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012655433164689462, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+      propertyPath: m_Name
+      value: PF Village Props - Wheat B
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+--- !u!4 &6673297775280496548 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8012655433164689460, guid: c3b86686583e114479cc11b139a8a401, type: 3}
+  m_PrefabInstance: {fileID: 3724190270122430352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6551345041744173273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7999380454510332518}
+    m_Modifications:
+    - target: {fileID: 3284380142945954000, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_Name
+      value: PF Village Props - Wheat A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.644
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.119703
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 250.24542
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+--- !u!4 &8610737130564382735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3284380142945954006, guid: fc9968c4dc5d5264b89413cdfe5d303e, type: 3}
+  m_PrefabInstance: {fileID: 6551345041744173273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6553277200397148069
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7999380454510332518}
+    m_Modifications:
+    - target: {fileID: 1224392861243821740, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_Name
+      value: PF Village Props - Wheat D
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5089998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.119703
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 250.24542
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+--- !u!4 &5335639887966163211 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}
+  m_PrefabInstance: {fileID: 6553277200397148069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8223700788866729247
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7999380454510332518}
+    m_Modifications:
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7950001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.119703
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 250.24542
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747694866668042363, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+      propertyPath: m_Name
+      value: PF Village Props - Wheat E
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+--- !u!4 &3729903086109588858 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4747694866668042341, guid: 0cde5280cb0df5240bf5cc2866248e08, type: 3}
+  m_PrefabInstance: {fileID: 8223700788866729247}
+  m_PrefabAsset: {fileID: 0}

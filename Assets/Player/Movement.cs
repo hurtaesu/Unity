@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
     private Status status;
     public bool isdash;
     public bool isdodge;
+    public bool isMove;
     [SerializeField]
     private float startdashtime;
     private float dashtime;
@@ -103,10 +104,12 @@ public class Movement : MonoBehaviour
         }   
         if(x == 1 || x == -1)
         {
+            isMove = true;
             animator.SetBool("move",true);
         }
         else if(x == 0)
         {
+            isMove = false;
             animator.SetBool("move",false);
         }
     }

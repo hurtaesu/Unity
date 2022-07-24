@@ -8,7 +8,7 @@ public class Controller : MonoBehaviour
     private Movement movement;
     private Status status;
     private Animator animator;
-
+    public float x;
     [SerializeField]
     Attack attack;
     [SerializeField]
@@ -32,7 +32,7 @@ public class Controller : MonoBehaviour
         {
             movement.jump();
         }
-        float x = Input.GetAxisRaw("Horizontal");
+        x = Input.GetAxisRaw("Horizontal");
         movement.Move(x);
         movement.dash(x);
         //АјАн
