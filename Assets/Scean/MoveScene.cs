@@ -21,7 +21,28 @@ public class MoveScene : MonoBehaviour
     {
         collision.gameObject.GetComponent<Transform>().position = new Vector3(0, 1, 0);
         Debug.Log("∏  ¿Ãµø");
-        SceneManager.LoadScene(6);
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            SceneManager.LoadScene(Random.Range(5, 7));
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            SceneManager.LoadScene(Random.Range(6, 7));
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 6)
+        {
+            SceneManager.LoadScene(Random.Range(4, 5));
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 7)
+        {
+            SceneManager.LoadScene(Random.Range(4, 6));
+        }
+        else
+        {
+            SceneManager.LoadScene(Random.Range(4, 7));
+        }
+
+
     }
 
 

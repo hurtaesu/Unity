@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMove : MonoBehaviour
 {
@@ -24,5 +25,20 @@ public class CameraMove : MonoBehaviour
             Mathf.Clamp(target.position.y + offset.y, limitMinY + cameraHalfHeight, limitMaxY - cameraHalfHeight), // Y
             -10);                                                                                                  // Z
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
+
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            limitMinX = -3;
+            limitMaxX = 37;
+            limitMinY = -13;
+            limitMaxY = 20;
+        }
+        else
+        {
+            limitMinX = -3;
+            limitMaxX = 100;
+            limitMinY = -1;
+            limitMaxY = 20;
+        }
     }
 }
