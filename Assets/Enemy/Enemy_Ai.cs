@@ -89,7 +89,7 @@ public class Enemy_Ai : MonoBehaviour
     {
         Move_Dir = Random.Range(-1,2);
 
-        float Think_Time = Random.Range(2f, 5f);
+        float Think_Time = Random.Range(4f, 5f);
         Invoke("Think", Think_Time);
     }
 
