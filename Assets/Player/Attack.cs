@@ -40,10 +40,11 @@ public class Attack : MonoBehaviour
         {
             Debug.Log("Àû¿¡ ´êÀ½");
             hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
-            hit.collider.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+            hit.collider.gameObject.GetComponent<CircleCollider2D>().enabled = false;
             hit.collider.gameObject.GetComponent<Enemy_Ai>().enabled = false;
             hit.collider.gameObject.GetComponent<Animator>().enabled = false;
             hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            hit.collider.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
         }
     }
 }

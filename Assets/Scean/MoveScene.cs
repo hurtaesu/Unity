@@ -23,23 +23,23 @@ public class MoveScene : MonoBehaviour
         Debug.Log("∏  ¿Ãµø");
         if (SceneManager.GetActiveScene().buildIndex == 4)
         {
-            SceneManager.LoadScene(Random.Range(5, 7));
+            SceneManager.LoadScene(Random.Range(5, 8));
         }
         else if (SceneManager.GetActiveScene().buildIndex == 5)
         {
-            SceneManager.LoadScene(Random.Range(6, 7));
+            SceneManager.LoadScene(Random.Range(6, 8));
         }
         else if (SceneManager.GetActiveScene().buildIndex == 6)
         {
-            SceneManager.LoadScene(Random.Range(4, 5));
+            SceneManager.LoadScene(Random.Range(4, 6));
         }
         else if (SceneManager.GetActiveScene().buildIndex == 7)
         {
-            SceneManager.LoadScene(Random.Range(4, 6));
+            SceneManager.LoadScene(Random.Range(4, 7));
         }
         else
         {
-            SceneManager.LoadScene(Random.Range(4, 7));
+            SceneManager.LoadScene(Random.Range(4, 9));
         }
 
 

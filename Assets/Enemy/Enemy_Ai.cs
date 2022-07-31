@@ -6,9 +6,13 @@ public class Enemy_Ai : MonoBehaviour
 {
     public float Enemy_speed;
     public int Move_Dir;
+    public float DashTime;
+    private bool isDash;
     SpriteRenderer sprite;
     Rigidbody2D rigid;
     Movement movement;
+    Animator animator;
+    BoxCollider2D boxCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,26 +20,55 @@ public class Enemy_Ai : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         movement = GameObject.Find("Player").GetComponent<Movement>();
         Invoke("Think", 3);
+        animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
     {
-        if(movement.isdodge == true)
+
+        if(isDash == true)
         {
-            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+            Enemy_speed = 3;
+            if (sprite.flipX == true)
+            {
+                Move_Dir = 1;
+            }
+            else
+            {
+                Move_Dir = -1;
+            }
+            animator.SetBool("isDash", true);
         }
         else
         {
-            gameObject.GetComponent<PolygonCollider2D>().enabled = true;
+            Enemy_speed = 1;
+            animator.SetBool("isDash",false);
+        }
+        if(movement.isdodge == true)
+        {
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        }
+        else
+        {
+            gameObject.GetComponent<CircleCollider2D>().enabled = true;
         }
         //좌우전환
         if (Move_Dir == 1)
         {
             sprite.flipX = true;
+            boxCollider.offset = new Vector2(6,0);
+            animator.SetBool("isMove",true);
         }
         else if(Move_Dir == -1)
         {
             sprite.flipX = false;
+            animator.SetBool("isMove", true);
+            boxCollider.offset = new Vector2(-6, 0);
+        }
+        else
+        {
+            animator.SetBool("isMove", false);
         }
         //움직임
         rigid.velocity = new Vector2(Move_Dir * Enemy_speed, rigid.velocity.y);
@@ -58,5 +91,18 @@ public class Enemy_Ai : MonoBehaviour
 
         float Think_Time = Random.Range(2f, 5f);
         Invoke("Think", Think_Time);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("돼지 돌진");
+        if(collision.CompareTag("Player") == true)
+        {
+            isDash = true;
+        }
+        else
+        {
+            isDash = false;
+        }
     }
 }
