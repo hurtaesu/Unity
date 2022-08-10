@@ -19,7 +19,7 @@ public class Status : MonoBehaviour
     }
     void Update()
     {
-        stamina_reload();
+
     }
 
     public void stamina_reload()

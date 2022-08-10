@@ -36,7 +36,7 @@ public class CameraMove : MonoBehaviour
         else
         {
             limitMinX = -3;
-            limitMaxX = 100;
+            limitMaxX = 20;
             limitMinY = -1;
             limitMaxY = 20;
         }

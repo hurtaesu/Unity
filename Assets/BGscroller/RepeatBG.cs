@@ -24,6 +24,11 @@ public class RepeatBG : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    public void ScrollBG()
+    {
         cam = GameObject.Find("Main Camera").transform.position;
         if (controller.x != 0)
         {

@@ -13,6 +13,7 @@ public class Controller : MonoBehaviour
     Attack attack;
     [SerializeField]
     WeaponDatabase weaponDatabase;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,8 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        status.stamina_reload();
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

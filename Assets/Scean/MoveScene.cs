@@ -19,6 +19,7 @@ public class MoveScene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //수정예정
         collision.gameObject.GetComponent<Transform>().position = new Vector3(0, 1, 0);
         Debug.Log("맵 이동");
         if (SceneManager.GetActiveScene().buildIndex == 4)
@@ -41,8 +42,6 @@ public class MoveScene : MonoBehaviour
         {
             SceneManager.LoadScene(Random.Range(4, 9));
         }
-
-
     }
 
 
